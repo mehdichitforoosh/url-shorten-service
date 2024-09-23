@@ -120,4 +120,4 @@ cloud providers or on-premises infrastructure.
 You can automate the process of building Docker image and publishing it to Docker registries using GitHub Actions.
 
 ## Architecture
-![Architecture diagram in production](https://github.com/mehdichitforoosh/url-shortener/blob/main/scalable-production-diagram.svg)
+![Architecture diagram in production](https://github.com/mehdichitforoosh/url-shorten-service/blob/main/production-design.svg)
