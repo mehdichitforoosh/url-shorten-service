@@ -82,3 +82,42 @@ Response:
     "longUrl": "https://www.example.com""
 }
 ```
+
+### Running Tests with Gradle Wrapper
+
+Run the following command to execute all tests defined in the project:
+
+```
+./gradlew test
+```
+## Production Environment Considerations
+
+In the production environment, several optimizations and infrastructure choices can enhance the performance,
+scalability, and reliability of the URL shortening service.
+
+### Distributed Key/Value NoSQL Database
+
+For persistent storage of URL mappings across multiple nodes and high availability, consider using a distributed
+key/value NoSQL database like Cassandra.
+
+### Load Balancers
+
+Utilize load balancers to distribute incoming requests among multiple instances of the application service. This ensures
+efficient utilization of resources and improves overall reliability by reducing the impact of individual node failures.
+
+### Distributed Cache (Redis)
+
+Integrate a distributed caching solution such as Redis to cache frequently accessed or popular URLs. This helps reduce
+latency and improves performance by serving cached content directly from memory.
+
+### Container Orchestration with Kubernetes
+
+Deploy the application services as containers orchestrated by Kubernetes. Kubernetes provides automated container
+deployment, scaling, and management, making it suitable for deploying and managing containerized applications across
+cloud providers or on-premises infrastructure.
+
+### CI/CD pipelines
+You can automate the process of building Docker image and publishing it to Docker registries using GitHub Actions.
+
+## Architecture
+![Architecture diagram in production](https://github.com/mehdichitforoosh/url-shortener/blob/main/scalable-production-diagram.svg)
