@@ -14,7 +14,7 @@ class Base62EncoderTest {
         // When
         val result = sut.encode(number)
         // Then
-        assertEquals("86hn", result)
+        assertEquals("86HN", result)
     }
 
     @Test
@@ -34,7 +34,7 @@ class Base62EncoderTest {
         // When
         val result = sut.encode(number)
         // Then
-        assertEquals("AzL8n0Y58m7", result)
+        assertEquals("aZl8N0y58M7", result)
     }
 
 }
