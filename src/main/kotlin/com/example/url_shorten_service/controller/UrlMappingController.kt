@@ -19,7 +19,7 @@ class UrlMappingController(private var urlMappingService: UrlMappingService) {
     }
 
     @GetMapping("/{shortUrl}")
-    fun getUrlMapping(@PathVariable shortUrl: String): UrlMappingJson? {
+    fun getUrlMapping(@PathVariable shortUrl: String): UrlMappingJson {
         val shortUrlDto = urlMappingService.getUrlMapping(shortUrl)
         return shortUrlDto?.let { UrlMappingJson(shortUrlDto.id, shortUrlDto.shortUrl, shortUrlDto.longUrl) }
             ?: throw NotFoundException("Short url $shortUrl not found")
